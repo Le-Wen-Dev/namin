@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif:wght@300;400;500;600;700&family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -222,54 +225,9 @@
         </div>
     </div>
     
-    <!-- Image Slider Above Banner -->
-    <div class="banner-slider-wrapper">
-        <div class="banner-slider" id="banner-slider">
-            <div class="banner-slide active">
-                <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=1920&h=1080&fit=crop" alt="Bathroom 1" class="banner-slide-img">
-            </div>
-            <div class="banner-slide">
-                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1920&h=1080&fit=crop" alt="Bathroom 2" class="banner-slide-img">
-            </div>
-            <div class="banner-slide">
-                <img src="https://images.unsplash.com/photo-1631889993954-7b945d5693e5?w=1920&h=1080&fit=crop" alt="Bathroom 3" class="banner-slide-img">
-            </div>
-        </div>
-        <button class="banner-slider-prev" aria-label="Previous slide">‹</button>
-        <button class="banner-slider-next" aria-label="Next slide">›</button>
-        <div class="banner-slider-dots">
-            <span class="banner-dot active" data-slide="0"></span>
-            <span class="banner-dot" data-slide="1"></span>
-            <span class="banner-dot" data-slide="2"></span>
-        </div>
-    </div>
-    
-    <div class="video-banner banner-image">
-        <video autoplay muted loop playsinline class="banner-video">
-            <source src="<?php echo esc_url(home_url('/wp-content/uploads/2025/12/barber-tablet.webm')); ?>" type="video/webm">
-        </video>
-        <div class="banner-overlay"></div>
-        
-        <!-- Curved Slider at 500px height -->
-        <div class="curved-slider-container">
-            <div class="curved-slider" id="curved-slider">
-                <div class="curved-slide">
-                    <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=600&h=400&fit=crop" alt="Bathroom 1" class="curved-slide-img">
-                </div>
-                <div class="curved-slide">
-                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&h=400&fit=crop" alt="Bathroom 2" class="curved-slide-img">
-                </div>
-                <div class="curved-slide">
-                    <img src="https://images.unsplash.com/photo-1631889993954-7b945d5693e5?w=600&h=400&fit=crop" alt="Bathroom 3" class="curved-slide-img">
-                </div>
-                <div class="curved-slide">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop" alt="Bathroom 4" class="curved-slide-img">
-                </div>
-                <div class="curved-slide">
-                    <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&h=400&fit=crop" alt="Bathroom 5" class="curved-slide-img">
-                </div>
-            </div>
-        </div>
+    <!-- Simple Banner -->
+    <div class="simple-banner">
+        <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/12/collection2-2023.38b43e3.webp')); ?>" alt="Namin Banner" class="simple-banner-img">
     </div>
 
     <main id="main-content" class="site-main">

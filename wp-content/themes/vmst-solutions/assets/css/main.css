@@ -8,7 +8,9 @@
 @import url('defaults.css');
 @import url('homepage.css');
 
-/* Update font paths to local */
+/* Fonts loaded from Google Fonts - Inter, Noto Sans, Noto Serif */
+/* Local font files commented out - using Google Fonts for better Vietnamese support */
+/*
 @font-face {
     font-family: "Clarkson";
     src: url('../fonts/clarkson-300.woff2') format("woff2");
@@ -48,6 +50,7 @@
     font-style: normal;
     font-display: swap;
 }
+*/
 
 /* Base Styles */
 :root {
@@ -192,7 +195,7 @@ p, span, a, button, input, textarea, select,
     text-decoration: none;
     font-size: 15px;
     font-weight: 400;
-    font-family: "Clarkson", sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Vietnamese", sans-serif;
     cursor: pointer;
     padding: 8px 0;
     display: flex;
@@ -256,7 +259,7 @@ p, span, a, button, input, textarea, select,
 }
 
 .mega-menu-title {
-    font-family: "Clarkson", sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Vietnamese", sans-serif;
     font-size: 12px;
     font-weight: 500;
     color: #ffffff;
@@ -306,7 +309,7 @@ p, span, a, button, input, textarea, select,
 }
 
 .mega-menu-card-title {
-    font-family: "Clarkson", sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Vietnamese", sans-serif;
     font-size: 16px;
     font-weight: 500;
     color: #ffffff;
@@ -443,45 +446,6 @@ p, span, a, button, input, textarea, select,
 }
 
 /* Video Banner / Image Banner */
-.video-banner {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    min-height: 400px;
-    max-height: 600px;
-    overflow: visible;
-    background: #000000;
-    margin-bottom: -200px; /* Lấn xuống hero section */
-    z-index: 2;
-}
-
-.banner-video,
-.banner-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.banner-image {
-    background: #000000;
-}
-
-.banner-image:hover .banner-img {
-    transform: scale(1.02);
-}
-
-.banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.05) 100%);
-    pointer-events: none;
-    z-index: 1;
-}
 
 /* Main Content */
 .site-main {
@@ -529,7 +493,7 @@ p, span, a, button, input, textarea, select,
 }
 
 .footer-tagline {
-    font-family: "Clarkson Serif", serif;
+    font-family: "Noto Serif", "Times New Roman", Times, serif;
     font-size: 24px;
     font-weight: 400;
     color: #ffffff;
@@ -546,12 +510,21 @@ p, span, a, button, input, textarea, select,
 }
 
 .footer-links {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 40px;
+    display: flex;
+    gap: 0;
     margin-bottom: 60px;
     padding-bottom: 40px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-links .footer-column:not(.footer-company-info) {
+    flex: 0 0 auto;
+    margin-left: 0;
+    margin-right: 40px;
+}
+
+.footer-links .footer-column:not(.footer-company-info):last-child {
+    margin-right: 0;
 }
 
 .footer-column {
@@ -559,7 +532,7 @@ p, span, a, button, input, textarea, select,
 }
 
 .footer-column-title {
-    font-family: "Clarkson", sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Vietnamese", sans-serif;
     font-size: 14px;
     font-weight: 500;
     color: #ffffff;
@@ -569,7 +542,7 @@ p, span, a, button, input, textarea, select,
 }
 
 .footer-subtitle {
-    font-family: "Clarkson", sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Vietnamese", sans-serif;
     font-size: 13px;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.8);
@@ -932,7 +905,7 @@ p, span, a, button, input, textarea, select,
 }
 
 .card-title {
-    font-family: "Clarkson Serif", serif;
+    font-family: "Noto Serif", "Times New Roman", Times, serif;
     font-size: 32px;
     font-weight: 400;
     line-height: 1.3;
@@ -994,8 +967,8 @@ p, span, a, button, input, textarea, select,
 }
 
 .hero-title {
-    font-family: "Clarkson Serif", serif;
-    font-size: 64px;
+    font-family: "Noto Serif", "Times New Roman", Times, serif;
+    font-size: 49px;
     font-weight: 400;
     line-height: 1.2;
     margin: 0 0 24px 0;
@@ -1038,7 +1011,7 @@ p, span, a, button, input, textarea, select,
     font-weight: 500;
     color: #ffffff;
     margin-bottom: 12px;
-    font-family: "Clarkson", sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Vietnamese", sans-serif;
     line-height: 1;
     letter-spacing: -2px;
 }
@@ -1056,8 +1029,8 @@ p, span, a, button, input, textarea, select,
 }
 
 .grow-business-section .section-title {
-    font-family: "Clarkson Serif", serif;
-    font-size: 64px;
+    font-family: "Noto Serif", "Times New Roman", Times, serif;
+    font-size: 49px;
     font-weight: 400;
     text-align: center;
     margin: 0 0 16px 0;
@@ -1087,26 +1060,24 @@ p, span, a, button, input, textarea, select,
 
 .tab-btn {
     background: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: none;
     padding: 12px 24px;
-    border-radius: 6px;
+    border-radius: 18px;
     font-size: 15px;
     font-weight: 400;
     color: #1a1a1a;
     cursor: pointer;
     transition: all 0.2s ease;
-    font-family: "Clarkson", sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Vietnamese", sans-serif;
 }
 
 .tab-btn:hover {
     background: rgba(0, 0, 0, 0.05);
-    border-color: rgba(0, 0, 0, 0.2);
 }
 
 .tab-btn.active {
     background: #1a1a1a;
     color: #ffffff;
-    border-color: #1a1a1a;
 }
 
 /* Feature Cards Container */
@@ -1119,26 +1090,26 @@ p, span, a, button, input, textarea, select,
 
 .feature-card {
     display: none;
-    background: #2a2a2a;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    border-radius: 0;
+    overflow: visible;
+    box-shadow: none;
     transition: all 0.4s ease;
 }
 
 .feature-card.active {
     display: block;
-    animation: fadeIn 0.5s ease;
+    animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px) scale(0.95);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
 }
 
@@ -1166,8 +1137,8 @@ p, span, a, button, input, textarea, select,
 
 .feature-card-preview {
     position: relative;
-    padding: 0 60px 60px;
-    overflow: hidden;
+    padding: 0;
+    overflow: visible;
 }
 
 .preview-carousel {
@@ -1175,44 +1146,47 @@ p, span, a, button, input, textarea, select,
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0;
-    height: 500px;
+    width: 100%;
+    height: 480px;
 }
 
+
 .preview-item {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
-    background: #ffffff;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+    box-shadow: none;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
+    position: relative;
+    height: 480px;
 }
 
 .preview-item-left {
-    left: -85%;
-    width: 100%;
+    flex: 0 0 8%;
+    width: 8%;
+    margin-right: 2%;
     z-index: 1;
-    opacity: 0.8;
-    transform: scale(0.9);
+    opacity: 1;
+    transform: scale(1);
 }
 
 .preview-item-center {
-    left: 0;
-    width: 100%;
+    flex: 0 0 80%;
+    width: 80%;
+    margin: 0 2%;
     z-index: 3;
     opacity: 1;
     transform: scale(1);
 }
 
 .preview-item-right {
-    left: 85%;
-    width: 100%;
+    flex: 0 0 8%;
+    width: 8%;
+    margin-left: 2%;
     z-index: 1;
-    opacity: 0.8;
-    transform: scale(0.9);
+    opacity: 1;
+    transform: scale(1);
 }
 
 .preview-item:hover {
@@ -1224,6 +1198,7 @@ p, span, a, button, input, textarea, select,
     height: 100%;
     object-fit: cover;
     display: block;
+    border-radius: 8px;
 }
 
 .preview-overlay {
@@ -1261,7 +1236,7 @@ p, span, a, button, input, textarea, select,
 }
 
 .section-title {
-    font-family: "Clarkson Serif", serif;
+    font-family: "Noto Serif", "Times New Roman", Times, serif;
     font-size: 48px;
     font-weight: 400;
     text-align: center;
@@ -1333,8 +1308,8 @@ p, span, a, button, input, textarea, select,
 }
 
 .platform-title {
-    font-family: "Clarkson", sans-serif;
-    font-size: 64px;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Vietnamese", sans-serif;
+    font-size: 49px;
     font-weight: 500;
     line-height: 1.2;
     color: #1a1a1a;
@@ -1350,12 +1325,23 @@ p, span, a, button, input, textarea, select,
     padding-top: 8px;
 }
 
-.platform-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+.platform-cards-wrapper {
+    position: relative;
     max-width: 1400px;
     margin: 0 auto 40px;
+    overflow: hidden;
+}
+
+.platform-cards {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.platform-card {
+    flex: 0 0 calc(25% - 18px);
+    min-width: calc(25% - 18px);
 }
 
 .platform-card {
@@ -1377,7 +1363,7 @@ p, span, a, button, input, textarea, select,
 }
 
 .platform-card-title {
-    font-family: "Clarkson", sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Vietnamese", sans-serif;
     font-size: 24px;
     font-weight: 500;
     margin: 0 0 12px 0;
@@ -1515,8 +1501,8 @@ p, span, a, button, input, textarea, select,
 }
 
 .ai-starter-title {
-    font-family: "Clarkson", sans-serif;
-    font-size: 64px;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Vietnamese", sans-serif;
+    font-size: 54.4px;
     font-weight: 500;
     color: #1a1a1a;
     margin: 0 0 12px 0;
@@ -1535,7 +1521,7 @@ p, span, a, button, input, textarea, select,
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
-    max-width: 1400px;
+    max-width: 980px;
     margin: 0 auto 60px;
 }
 
@@ -1544,7 +1530,7 @@ p, span, a, button, input, textarea, select,
     border-radius: 16px;
     padding: 60px 40px;
     position: relative;
-    min-height: 600px;
+    min-height: 240px;
     display: flex;
     flex-direction: column;
 }
@@ -1607,7 +1593,7 @@ p, span, a, button, input, textarea, select,
     border: none;
     color: #ffffff;
     font-size: 18px;
-    font-family: "Clarkson", sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Vietnamese", sans-serif;
     outline: none;
     padding: 0;
 }
@@ -1621,7 +1607,7 @@ p, span, a, button, input, textarea, select,
 }
 
 .ai-panel-title {
-    font-family: "Clarkson", sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Vietnamese", sans-serif;
     font-size: 32px;
     font-weight: 500;
     color: #ffffff;
@@ -1646,7 +1632,7 @@ p, span, a, button, input, textarea, select,
     font-size: 16px;
     font-weight: 500;
     transition: all 0.3s ease;
-    font-family: "Clarkson", sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Vietnamese", sans-serif;
 }
 
 .ai-panel-btn:hover {
@@ -1718,8 +1704,8 @@ p, span, a, button, input, textarea, select,
 }
 
 .domain-title {
-    font-family: "Clarkson", sans-serif;
-    font-size: 64px;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Vietnamese", sans-serif;
+    font-size: 49px;
     font-weight: 500;
     color: #ffffff;
     margin: 0 0 60px 0;
@@ -1763,7 +1749,7 @@ p, span, a, button, input, textarea, select,
     border: none;
     color: #ffffff;
     font-size: 18px;
-    font-family: "Clarkson", sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Vietnamese", sans-serif;
     outline: none;
     padding: 0;
 }
@@ -1860,7 +1846,7 @@ p, span, a, button, input, textarea, select,
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: "Clarkson", sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Vietnamese", sans-serif;
     font-size: 72px;
     font-weight: 500;
     color: #ffffff;
@@ -1950,7 +1936,7 @@ p, span, a, button, input, textarea, select,
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-family: "Clarkson", sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Vietnamese", sans-serif;
 }
 
 .time-badge-showcase {
@@ -1974,8 +1960,8 @@ p, span, a, button, input, textarea, select,
 }
 
 .faq-title {
-    font-family: "Clarkson", sans-serif;
-    font-size: 64px;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Vietnamese", sans-serif;
+    font-size: 49px;
     font-weight: 500;
     color: #ffffff;
     margin: 0;
@@ -2003,7 +1989,7 @@ p, span, a, button, input, textarea, select,
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: "Clarkson", sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Vietnamese", sans-serif;
     font-size: 20px;
     font-weight: 400;
     transition: color 0.2s ease;
@@ -2155,8 +2141,8 @@ p, span, a, button, input, textarea, select,
 }
 
 .cta-title {
-    font-family: "Clarkson", sans-serif;
-    font-size: 72px;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Vietnamese", sans-serif;
+    font-size: 57px;
     font-weight: 500;
     color: #ffffff;
     margin: 0 0 24px 0;
@@ -2183,7 +2169,7 @@ p, span, a, button, input, textarea, select,
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    font-family: "Clarkson", sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Vietnamese", sans-serif;
 }
 
 .cta-button:hover {
@@ -2387,7 +2373,7 @@ p, span, a, button, input, textarea, select,
     }
     
     .ai-starter-title {
-        font-size: 36px;
+        font-size: 30.6px;
     }
     
     .ai-starter-subtitle {
@@ -2589,13 +2575,6 @@ p, span, a, button, input, textarea, select,
         font-size: 20px;
     }
     
-    /* Video Banner Responsive */
-    .video-banner {
-        height: 40vh;
-        min-height: 300px;
-        max-height: 400px;
-        margin-bottom: -150px; /* Giảm margin trên mobile */
-    }
     
     .hero-section {
         padding-top: 150px; /* Giảm padding trên mobile */
@@ -3423,3 +3402,129 @@ p, span, a, button, input, textarea, select,
 }
 
 
+
+/* Platform Card Background Colors */
+.platform-card[data-bg="gradient-1"] {
+    background: #BCBDBB; /* xám nhạt */
+}
+
+.platform-card[data-bg="gradient-2"] {
+    background: #4D5B5A; /* xanh đậm */
+}
+
+.platform-card[data-bg="gradient-3"] {
+    background: #A59381; /* nâu be */
+}
+
+.platform-card[data-bg="gradient-4"] {
+    background: #393532; /* nâu đen */
+}
+
+.platform-card[data-bg="solid-1"] {
+    background: #645C59; /* nâu xám */
+}
+
+.platform-card[data-bg="solid-2"] {
+    background: #898987; /* xám nhạt */
+}
+
+.platform-card[data-bg="solid-3"] {
+    background: #566462; /* xanh xám */
+}
+
+.platform-card[data-bg="solid-4"] {
+    background: #1F1209; /* nâu đen */
+}
+
+/* Platform Carousel Buttons */
+.platform-cards-wrapper {
+    position: relative;
+}
+
+.platform-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.platform-carousel-btn:hover {
+    background: #ffffff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.platform-carousel-btn svg {
+    width: 24px;
+    height: 24px;
+    stroke: #1a1a1a;
+}
+
+.platform-carousel-prev {
+    left: -25px;
+}
+
+.platform-carousel-next {
+    right: -25px;
+}
+
+@media (max-width: 1400px) {
+    .platform-carousel-prev {
+        left: 10px;
+    }
+    
+    .platform-carousel-next {
+        right: 10px;
+    }
+}
+
+/* Simple Banner */
+.simple-banner {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: #000000;
+}
+
+.simple-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Footer Company Info - Left aligned, gray text */
+
+.footer-company-info .footer-logo {
+    margin-bottom: 24px;
+}
+
+.footer-company-info .footer-logo-img {
+    filter: brightness(0) invert(1);
+    opacity: 0.5;
+    height: 32px;
+    width: auto;
+}
+
+.footer-company-info .footer-contact-info {
+    text-align: left;
+}
+
+.footer-company-info .footer-contact-info p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 12px 0;
+    text-align: left;
+}

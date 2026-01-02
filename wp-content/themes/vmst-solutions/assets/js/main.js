@@ -684,112 +684,7 @@
 
     function init() {
         console.log('VMST Solutions theme loaded');
-        initBannerSlider();
-        initCurvedSlider();
         initPlatformCarousel();
-    }
-    
-    // Curved Slider at 500px
-    function initCurvedSlider() {
-        const slider = document.getElementById('curved-slider');
-        const slides = slider ? slider.querySelectorAll('.curved-slide') : [];
-        
-        if (!slider || slides.length === 0) return;
-        
-        let currentIndex = 0;
-        const totalSlides = slides.length;
-        
-        function updateSlides() {
-            slides.forEach((slide, i) => {
-                // Remove all position classes and reset styles
-                slide.classList.remove('curved-slide-left', 'curved-slide-center', 'curved-slide-right');
-                slide.style.opacity = '';
-                slide.style.pointerEvents = '';
-                
-                // Calculate relative position (circular)
-                let position = i - currentIndex;
-                if (position < 0) position += totalSlides;
-                if (position >= totalSlides) position -= totalSlides;
-                
-                // Show only 3 slides: left, center, right
-                if (position === 0) {
-                    // Previous slide (left)
-                    slide.classList.add('curved-slide-left');
-                } else if (position === 1) {
-                    // Current slide (center)
-                    slide.classList.add('curved-slide-center');
-                } else if (position === 2) {
-                    // Next slide (right)
-                    slide.classList.add('curved-slide-right');
-                } else {
-                    // Hide other slides
-                    slide.style.opacity = '0';
-                    slide.style.pointerEvents = 'none';
-                }
-            });
-        }
-        
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % totalSlides;
-            updateSlides();
-        }
-        
-        // Initialize
-        updateSlides();
-        
-        // Auto slide every 4 seconds
-        setInterval(nextSlide, 4000);
-    }
-    
-    // Banner Slider
-    function initBannerSlider() {
-        const slider = document.getElementById('banner-slider');
-        const slides = slider ? slider.querySelectorAll('.banner-slide') : [];
-        const prevBtn = document.querySelector('.banner-slider-prev');
-        const nextBtn = document.querySelector('.banner-slider-next');
-        const dots = document.querySelectorAll('.banner-dot');
-        
-        if (!slider || slides.length === 0) return;
-        
-        let currentSlide = 0;
-        const totalSlides = slides.length;
-        
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === index);
-            });
-            
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === index);
-            });
-            
-            currentSlide = index;
-        }
-        
-        function nextSlide() {
-            const next = (currentSlide + 1) % totalSlides;
-            showSlide(next);
-        }
-        
-        function prevSlide() {
-            const prev = (currentSlide - 1 + totalSlides) % totalSlides;
-            showSlide(prev);
-        }
-        
-        if (prevBtn) {
-            prevBtn.addEventListener('click', prevSlide);
-        }
-        
-        if (nextBtn) {
-            nextBtn.addEventListener('click', nextSlide);
-        }
-        
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => showSlide(index));
-        });
-        
-        // Auto slide every 5 seconds
-        setInterval(nextSlide, 5000);
     }
     
     // Platform Cards Carousel
@@ -819,12 +714,16 @@
         
         function updateCarousel() {
             cardsPerView = getCardsPerView();
-            const cardWidth = cards[0] ? cards[0].offsetWidth + 24 : 0; // card width + gap
-            const translateX = -currentIndex * cardWidth;
+            // Calculate card width including gap for flex layout
+            // With flex: 0 0 calc(25% - 18px), we need to calculate the actual width
+            const wrapper = carousel.parentElement;
+            const wrapperWidth = wrapper ? wrapper.offsetWidth : 1400;
+            const cardWidth = wrapperWidth / 4; // 25% of wrapper width
+            const gap = 24;
+            const translateX = -currentIndex * (cardWidth + gap);
             carousel.style.transform = `translateX(${translateX}px)`;
             
             // Update dots - each dot represents one card position
-            // Map currentIndex to dot (considering we can scroll from 0 to totalCards - cardsPerView)
             const maxIndex = Math.max(0, totalCards - cardsPerView);
             const activeDotIndex = Math.min(currentIndex, dots.length - 1);
             

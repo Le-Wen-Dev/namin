@@ -9,83 +9,6 @@
 get_header();
 ?>
 
-<div class="hero-section">
-    <div class="hero-background">
-        <div class="hero-video-wrapper">
-            <video autoplay muted loop playsinline class="hero-video">
-                <source src="https://media-www.sqspcdn.com/videos/pages/homepage-2025/hero/plants-mobile.webm" type="video/webm">
-            </video>
-            <div class="hero-overlay"></div>
-        </div>
-    </div>
-    
-    <div class="hero-content-wrapper">
-        <div class="hero-cards">
-            <div class="hero-card hero-card-1">
-                <div class="card-content">
-                    <div class="card-header">
-                        <span class="card-logo">NAMIN</span>
-                        <button class="card-menu-btn">SẢN PHẨM</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="hero-card hero-card-2 active">
-                <div class="card-content">
-                    <div class="card-header">
-                        <span class="card-logo">NAMIN</span>
-                        <nav class="card-nav">
-                            <a href="#">SẢN PHẨM</a>
-                            <a href="#">BỘ SƯU TẬP</a>
-                            <a href="#">CỬA HÀNG</a>
-                            <a href="#">GIỚI THIỆU</a>
-                            <a href="#">GIỎ HÀNG (0)</a>
-                        </nav>
-                    </div>
-                    <div class="card-body">
-                        <h2 class="card-title">THIẾT BỊ PHÒNG TẮM<br>CAO CẤP NHẬP KHẨU.</h2>
-                        <button class="card-cta">XEM SẢN PHẨM</button>
-                    </div>
-                    <div class="card-badges">
-                        <span class="badge badge-1">BỒN CẦU</span>
-                        <span class="badge badge-2">VÒI SEN</span>
-                        <span class="badge badge-3">& LAVABO</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="hero-card hero-card-3">
-                <div class="card-content">
-                    <div class="card-header">
-                        <span class="card-logo">NAMIN</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="hero-text">
-            <p class="hero-intro">Thiết bị phòng tắm cao cấp nhập khẩu<br>cho không gian sống sang trọng.</p>
-        </div>
-    </div>
-</div>
-
-<div class="stats-section">
-    <div class="stats-container">
-        <div class="stat-item">
-            <div class="stat-number">50K+</div>
-            <div class="stat-label">Khách Hàng Tin Dùng</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">500+</div>
-            <div class="stat-label">Sản Phẩm Cao Cấp</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">30+</div>
-            <div class="stat-label">Thương Hiệu Quốc Tế</div>
-        </div>
-    </div>
-</div>
-
 <section class="grow-business-section">
     <div class="content-area">
         <h2 class="section-title">Sản phẩm đa dạng cho mọi nhu cầu</h2>
@@ -98,30 +21,24 @@ get_header();
             <button class="tab-btn" data-tab="scheduling">Phụ Kiện</button>
             <button class="tab-btn" data-tab="donations">Gương</button>
             <button class="tab-btn" data-tab="memberships">Bồn Tắm</button>
-            <button class="tab-btn" data-tab="blog">Thiết Bị Thông Minh</button>
-            <button class="tab-btn" data-tab="portfolio">Bộ Sưu Tập</button>
         </div>
         
         <div class="feature-cards-container">
             <!-- Services Card -->
             <div class="feature-card active" data-feature="services">
-                <div class="feature-card-header">
-                    <h3 class="feature-card-title">Bồn cầu thông minh cao cấp</h3>
-                    <p class="feature-card-desc">Bồn cầu nhật khẩu với công nghệ hiện đại, thiết kế sang trọng và tính năng thông minh cho không gian phòng tắm đẳng cấp.</p>
-                </div>
                 <div class="feature-card-preview">
                     <div class="preview-carousel">
-                        <div class="preview-item preview-item-left" data-index="0">
-                            <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&h=600&fit=crop" alt="Bathroom 1" class="preview-image">
+                        <div class="preview-item preview-item-left">
+                            <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/12/Thiet-bi-phong-tam.webp')); ?>" alt="Bathroom 1" class="preview-image" width="600" height="480">
                         </div>
-                        <div class="preview-item preview-item-center active" data-index="1">
-                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=600&fit=crop" alt="Bathroom 2" class="preview-image">
+                        <div class="preview-item preview-item-center active">
+                            <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/12/rg-51-1-768x512.webp')); ?>" alt="Bathroom 2" class="preview-image" width="600" height="480">
                             <div class="preview-overlay">
                                 <div class="preview-badge">Bồn Cầu Thông Minh</div>
                             </div>
                         </div>
-                        <div class="preview-item preview-item-right" data-index="2">
-                            <img src="https://images.unsplash.com/photo-1631889993954-7b945d5693e5?w=800&h=600&fit=crop" alt="Bathroom 3" class="preview-image">
+                        <div class="preview-item preview-item-right">
+                            <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/12/thiet-bi-ve-sinh-kohler-150x150.webp')); ?>" alt="Bathroom 3" class="preview-image" width="600" height="480">
                         </div>
                     </div>
                 </div>
@@ -129,23 +46,19 @@ get_header();
             
             <!-- Online Store Card -->
             <div class="feature-card" data-feature="store">
-                <div class="feature-card-header">
-                    <h3 class="feature-card-title">Vòi sen cao cấp nhập khẩu</h3>
-                    <p class="feature-card-desc">Vòi sen thiết kế hiện đại với nhiều chế độ xịt, công nghệ tiết kiệm nước và độ bền cao từ các thương hiệu hàng đầu.</p>
-                </div>
                 <div class="feature-card-preview">
                     <div class="preview-carousel">
-                        <div class="preview-item preview-item-left" data-index="0">
-                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop" alt="Bathroom 1" class="preview-image">
+                        <div class="preview-item preview-item-left">
+                            <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/12/thiet-bi-ve-sinh-768x432.webp')); ?>" alt="Bathroom 1" class="preview-image" width="600" height="480">
                         </div>
-                        <div class="preview-item preview-item-center active" data-index="1">
-                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=600&fit=crop" alt="Bathroom 2" class="preview-image">
+                        <div class="preview-item preview-item-center active">
+                            <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/12/starck-1-tu-ket-hop-lavabo-15771.webp')); ?>" alt="Bathroom 2" class="preview-image" width="600" height="480">
                             <div class="preview-overlay">
                                 <div class="preview-badge">Vòi Sen Nhập Khẩu</div>
                             </div>
                         </div>
-                        <div class="preview-item preview-item-right" data-index="2">
-                            <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&h=600&fit=crop" alt="Bathroom 3" class="preview-image">
+                        <div class="preview-item preview-item-right">
+                            <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/12/lua-chon-thiet-bi-ve-sinh-chuan.webp')); ?>" alt="Bathroom 3" class="preview-image" width="600" height="480">
                         </div>
                     </div>
                 </div>
@@ -153,23 +66,19 @@ get_header();
             
             <!-- Invoicing Card -->
             <div class="feature-card" data-feature="invoicing">
-                <div class="feature-card-header">
-                    <h3 class="feature-card-title">Lavabo đá tự nhiên cao cấp</h3>
-                    <p class="feature-card-desc">Lavabo được chế tác từ đá tự nhiên và composite cao cấp, thiết kế tinh tế phù hợp với mọi không gian phòng tắm hiện đại.</p>
-                </div>
                 <div class="feature-card-preview">
                     <div class="preview-carousel">
-                        <div class="preview-item preview-item-left" data-index="0">
-                            <img src="https://images.unsplash.com/photo-1631889993954-7b945d5693e5?w=800&h=600&fit=crop" alt="Bathroom 1" class="preview-image">
+                        <div class="preview-item preview-item-left">
+                            <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/12/rszthiet-bi-ve-sinh-cao-cap-1634-150x150.webp')); ?>" alt="Bathroom 1" class="preview-image" width="600" height="480">
                         </div>
-                        <div class="preview-item preview-item-center active" data-index="1">
-                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=600&fit=crop" alt="Bathroom 2" class="preview-image">
+                        <div class="preview-item preview-item-center active">
+                            <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/12/starck-1-tu-ket-hop-lavabo-15771.webp')); ?>" alt="Bathroom 2" class="preview-image" width="600" height="480">
                             <div class="preview-overlay">
                                 <div class="preview-badge">Lavabo Đá Tự Nhiên</div>
                             </div>
                         </div>
-                        <div class="preview-item preview-item-right" data-index="2">
-                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop" alt="Bathroom 3" class="preview-image">
+                        <div class="preview-item preview-item-right">
+                            <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/12/collection2-2023.38b43e3-1024x512.webp')); ?>" alt="Bathroom 3" class="preview-image" width="600" height="480">
                         </div>
                     </div>
                 </div>
@@ -177,23 +86,19 @@ get_header();
             
             <!-- Scheduling Card -->
             <div class="feature-card" data-feature="scheduling">
-                <div class="feature-card-header">
-                    <h3 class="feature-card-title">Phụ kiện phòng tắm sang trọng</h3>
-                    <p class="feature-card-desc">Bộ phụ kiện phòng tắm đầy đủ từ giá treo khăn, kệ đựng đồ đến vòi nước, tất cả đều được thiết kế đồng bộ và tinh tế.</p>
-                </div>
                 <div class="feature-card-preview">
                     <div class="preview-carousel">
-                        <div class="preview-item preview-item-left" data-index="0">
-                            <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&h=600&fit=crop" alt="Bathroom 1" class="preview-image">
+                        <div class="preview-item preview-item-left">
+                            <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/12/Thiet-bi-phong-tam.webp')); ?>" alt="Bathroom 1" class="preview-image" width="600" height="480">
                         </div>
-                        <div class="preview-item preview-item-center active" data-index="1">
-                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=600&fit=crop" alt="Bathroom 2" class="preview-image">
+                        <div class="preview-item preview-item-center active">
+                            <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/12/rg-51-1-768x512.webp')); ?>" alt="Bathroom 2" class="preview-image" width="600" height="480">
                             <div class="preview-overlay">
                                 <div class="preview-badge">Phụ Kiện Cao Cấp</div>
                             </div>
                         </div>
-                        <div class="preview-item preview-item-right" data-index="2">
-                            <img src="https://images.unsplash.com/photo-1631889993954-7b945d5693e5?w=800&h=600&fit=crop" alt="Bathroom 3" class="preview-image">
+                        <div class="preview-item preview-item-right">
+                            <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/12/thiet-bi-ve-sinh-kohler-150x150.webp')); ?>" alt="Bathroom 3" class="preview-image" width="600" height="480">
                         </div>
                     </div>
                 </div>
@@ -201,23 +106,19 @@ get_header();
             
             <!-- Donations Card -->
             <div class="feature-card" data-feature="donations">
-                <div class="feature-card-header">
-                    <h3 class="feature-card-title">Gương phòng tắm thông minh</h3>
-                    <p class="feature-card-desc">Gương phòng tắm tích hợp đèn LED, chống mờ hơi nước và thiết kế hiện đại, tạo điểm nhấn cho không gian phòng tắm.</p>
-                </div>
                 <div class="feature-card-preview">
                     <div class="preview-carousel">
-                        <div class="preview-item preview-item-left" data-index="0">
-                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop" alt="Bathroom 1" class="preview-image">
+                        <div class="preview-item preview-item-left">
+                            <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/12/Thiet-bi-phong-tam.webp')); ?>" alt="Bathroom 1" class="preview-image" width="600" height="480">
                         </div>
-                        <div class="preview-item preview-item-center active" data-index="1">
-                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=600&fit=crop" alt="Bathroom 2" class="preview-image">
+                        <div class="preview-item preview-item-center active">
+                            <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/12/rg-51-1-768x512.webp')); ?>" alt="Bathroom 2" class="preview-image" width="600" height="480">
                             <div class="preview-overlay">
                                 <div class="preview-badge">Gương Thông Minh</div>
                             </div>
                         </div>
-                        <div class="preview-item preview-item-right" data-index="2">
-                            <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&h=600&fit=crop" alt="Bathroom 3" class="preview-image">
+                        <div class="preview-item preview-item-right">
+                            <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/12/thiet-bi-ve-sinh-kohler-150x150.webp')); ?>" alt="Bathroom 3" class="preview-image" width="600" height="480">
                         </div>
                     </div>
                 </div>
@@ -225,75 +126,24 @@ get_header();
             
             <!-- Memberships Card -->
             <div class="feature-card" data-feature="memberships">
-                <div class="feature-card-header">
-                    <h3 class="feature-card-title">Bồn tắm sang trọng nhập khẩu</h3>
-                    <p class="feature-card-desc">Bồn tắm cao cấp với nhiều kiểu dáng từ truyền thống đến hiện đại, chất liệu cao cấp và thiết kế tinh tế cho không gian thư giãn hoàn hảo.</p>
-                </div>
                 <div class="feature-card-preview">
                     <div class="preview-carousel">
-                        <div class="preview-item preview-item-left" data-index="0">
-                            <img src="https://images.unsplash.com/photo-1631889993954-7b945d5693e5?w=800&h=600&fit=crop" alt="Bathroom 1" class="preview-image">
+                        <div class="preview-item preview-item-left">
+                            <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/12/Thiet-bi-phong-tam.webp')); ?>" alt="Bathroom 1" class="preview-image" width="600" height="480">
                         </div>
-                        <div class="preview-item preview-item-center active" data-index="1">
-                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=600&fit=crop" alt="Bathroom 2" class="preview-image">
+                        <div class="preview-item preview-item-center active">
+                            <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/12/rg-51-1-768x512.webp')); ?>" alt="Bathroom 2" class="preview-image" width="600" height="480">
                             <div class="preview-overlay">
                                 <div class="preview-badge">Bồn Tắm Nhập Khẩu</div>
                             </div>
                         </div>
-                        <div class="preview-item preview-item-right" data-index="2">
-                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop" alt="Bathroom 3" class="preview-image">
+                        <div class="preview-item preview-item-right">
+                            <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/12/thiet-bi-ve-sinh-kohler-150x150.webp')); ?>" alt="Bathroom 3" class="preview-image" width="600" height="480">
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Blog Card -->
-            <div class="feature-card" data-feature="blog">
-                <div class="feature-card-header">
-                    <h3 class="feature-card-title">Thiết bị phòng tắm thông minh</h3>
-                    <p class="feature-card-desc">Hệ thống thiết bị thông minh với điều khiển tự động, cảm biến thông minh và tích hợp công nghệ IoT cho trải nghiệm hiện đại.</p>
-                </div>
-                <div class="feature-card-preview">
-                    <div class="preview-carousel">
-                        <div class="preview-item preview-item-left" data-index="0">
-                            <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&h=600&fit=crop" alt="Bathroom 1" class="preview-image">
-                        </div>
-                        <div class="preview-item preview-item-center active" data-index="1">
-                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=600&fit=crop" alt="Bathroom 2" class="preview-image">
-                            <div class="preview-overlay">
-                                <div class="preview-badge">Thiết Bị Thông Minh</div>
-                            </div>
-                        </div>
-                        <div class="preview-item preview-item-right" data-index="2">
-                            <img src="https://images.unsplash.com/photo-1631889993954-7b945d5693e5?w=800&h=600&fit=crop" alt="Bathroom 3" class="preview-image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Portfolio Card -->
-            <div class="feature-card" data-feature="portfolio">
-                <div class="feature-card-header">
-                    <h3 class="feature-card-title">Bộ sưu tập thiết bị cao cấp</h3>
-                    <p class="feature-card-desc">Bộ sưu tập đầy đủ các thiết bị phòng tắm được thiết kế đồng bộ, từ bồn cầu, lavabo đến phụ kiện, tạo nên không gian hoàn hảo.</p>
-                </div>
-                <div class="feature-card-preview">
-                    <div class="preview-carousel">
-                        <div class="preview-item preview-item-left" data-index="0">
-                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop" alt="Bathroom 1" class="preview-image">
-                        </div>
-                        <div class="preview-item preview-item-center active" data-index="1">
-                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=600&fit=crop" alt="Bathroom 2" class="preview-image">
-                            <div class="preview-overlay">
-                                <div class="preview-badge">Bộ Sưu Tập</div>
-                            </div>
-                        </div>
-                        <div class="preview-item preview-item-right" data-index="2">
-                            <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&h=600&fit=crop" alt="Bathroom 3" class="preview-image">
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -301,7 +151,7 @@ get_header();
 <section class="platform-section">
     <div class="content-area">
         <div class="platform-header">
-            <h2 class="platform-title">Tất cả thiết bị bạn cần trong một bộ sưu tập</h2>
+            <h2 class="platform-title">Tất cả thiết bị bạn cần</h2>
             <p class="platform-subtitle">Thiết bị phòng tắm và nhà vệ sinh cao cấp nhập khẩu từ các thương hiệu hàng đầu, được tích hợp hoàn hảo cho không gian sống của bạn.</p>
         </div>
         
@@ -460,7 +310,7 @@ get_header();
             <div class="ai-panel ai-panel-right">
                 <div class="templates-grid">
                     <div class="template-item">
-                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=300&h=300&fit=crop" alt="Bathroom template 4">
+                        <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&h=400&fit=crop" alt="Bathroom template 3">
                         <div class="template-overlay">ELEVATED</div>
                     </div>
                     <div class="template-item">
@@ -472,7 +322,7 @@ get_header();
                         <div class="template-overlay">DESIGN</div>
                     </div>
                     <div class="template-item">
-                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=300&h=300&fit=crop" alt="Bathroom template 7">
+                        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600&h=400&fit=crop" alt="Bathroom template 7">
                         <div class="template-overlay">BEAUTY</div>
                     </div>
                     <div class="template-item">
